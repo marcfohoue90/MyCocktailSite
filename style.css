@@ -6,13 +6,13 @@ body {
     font-family: 'Baloo Bhai 2', cursive;
     margin: 0;
     padding: 0;
-    background-color: #faf3e0; /* Couleur de fond beige clair */
+    background-color: #faf3e0; /* Fond beige clair */
     color: #333;
 }
 
 /* Header */
 header {
-    background: linear-gradient(45deg, #ff7f50, #ffb347); /* Couleurs vives */
+    background: linear-gradient(45deg, #ff7f50, #ffb347);
     padding: 15px 20px;
     text-align: center; /* Centrer le titre */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -26,8 +26,8 @@ header {
 }
 
 .logo {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -35,6 +35,50 @@ header h1 {
     font-size: 24px;
     margin: 0;
     white-space: nowrap;
+}
+
+/* Section présentation */
+.presentation {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5e3c3;
+    border-bottom: 1px solid #ddd;
+}
+
+@keyframes border-color-change {
+    0% {
+        border-color: #ff7f50; /* Couleur du dégradé du header */
+    }
+    50% {
+        border-color: #ffb347; /* Couleur du dégradé du header */
+    }
+    100% {
+        border-color: #ff7f50; /* Couleur du dégradé du header */
+    }
+}
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Assure que l'image est parfaitement ronde */
+    object-fit: contain; /* L'image s'ajuste à l'intérieur du conteneur */
+    object-position: center; /* L'image est centrée dans le conteneur */
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+    border: 5px solid #ff7f50; /* Ajoute une bordure avec la première couleur du dégradé */
+    animation: border-color-change 3s infinite; /* Animation de la couleur de la bordure */
+}
+
+.presentation-text h2 {
+    font-size: 20px;
+    color: #d2691e;
+    margin: 10px 0;
+}
+
+.presentation-text p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
 }
 
 /* Conteneur des cocktails */
@@ -48,7 +92,7 @@ header h1 {
 
 /* Cartes des cocktails */
 .cocktail-card {
-    background-color: #f5e3c3; /* Couleur beige pour les cartes */
+    background-color: #f5e3c3;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -56,21 +100,21 @@ header h1 {
     width: 95%;
     max-width: 350px;
     padding: 15px;
-    border: 1px solid #e0d5b5; /* Couleur plus sombre pour la bordure */
+    border: 1px solid #e0d5b5;
 }
 
 .cocktail-card img {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Taille maximale pour les images */
+    max-height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
     border-radius: 5px;
 }
 
 .cocktail-card h2 {
-    font-size: 20px;
-    color: #d2691e; /* Brun clair pour le titre */
+    font-size: 25px;
+    color: #d2691e;
     margin: 10px 0;
 }
 
@@ -93,6 +137,35 @@ header h1 {
 
 .cocktail-card ul li {
     margin-bottom: 5px;
+}
+
+/* Section contact */
+.contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5e3c3;
+    border-top: 1px solid #ddd;
+}
+
+.contact h2 {
+    font-size: 20px;
+    color: #d2691e;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #d44713;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
