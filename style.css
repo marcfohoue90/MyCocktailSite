@@ -191,3 +191,67 @@ footer {
     color: white;
     font-size: 14px;
 }
+
+.highlight {
+    background-color: #ffefd5; /* Couleur de fond pêche pâle */
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffdab9; /* Bordure pêche pâle */
+    position: relative;
+    max-width: 350px; /* Largeur maximale du bloc */
+    width: 95%; /* S'adapte au mobile */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /* Assure que les éléments ne débordent pas */
+}
+
+.highlight::before, .highlight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 223, 173, 0.5);
+    animation: glow 2s infinite alternate;
+}
+
+.highlight::before {
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #ff7f50, #ffb347, #ffefd5, #ffdab9);
+    border-image-slice: 1;
+    animation: border-glow 5s linear infinite;
+}
+
+.highlight h2 {
+    font-size: 2em;
+    color: #ff4500; /* Couleur orange vif */
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1.2em;
+    color: #8b4513; /* Couleur marron foncé */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 223, 173, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 223, 173, 1);
+    }
+}
+
+@keyframes border-glow {
+    0% {
+        border-image-source: linear-gradient(45deg, #ff7f50, #ffb347, #ffefd5, #ffdab9);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #ffdab9, #ffefd5, #ffb347, #ff7f50);
+    }
+}
